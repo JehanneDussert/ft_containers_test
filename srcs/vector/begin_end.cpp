@@ -14,16 +14,16 @@ void	begin_end()
 	ft::vector<int>::iterator	end2 = v2.end();
 
 	if (*it1 == *it2 && it1 == v1.begin())
-		{ std::cout << "Begin :\t\e[0;32m[⭐️]\e[0m\t"; }
+		{ std::cout << "Begin :\t\t\e[0;32m[⭐️]\e[0m\t"; }
 	else
-		{ std::cout << "Begin :\t\e[0;31m[💥]\e[0m\t"; }
+		{ std::cout << "Begin :\t\t\e[0;31m[💥]\e[0m\t"; }
     while (it1 != end1)
 		it1++;
 	while (it2 != end2)
 		it2++;
 	if (it1 == v1.end())
-		{ std::cout << "End :\t\e[0;32m[⭐️]\e[0m\t"; }
+		{ std::cout << "End :\t\t\e[0;32m[⭐️]\e[0m\t"; }
 	else
-		{ std::cout << "End :\t\e[0;31m[💥]\e[0m\t"; }
+		{ std::cout << "End :\t\t\e[0;31m[💥]\e[0m\t"; }
     std::cout << "\n\n";
 }

@@ -33,9 +33,9 @@ void	insert_erase()
 		    err++;
     }
     if (!err)
-		std::cout << "Erase :\t\e[0;32m[⭐️]\e[0m\t";
+		std::cout << "Erase :\t\t\e[0;32m[⭐️]\e[0m\t";
     else
-		std::cout << "Erase :\t\e[0;31m[💥]\e[0m\t";
+		std::cout << "Erase :\t\t\e[0;31m[💥]\e[0m\t";
 
     std::cout << std::endl;
 }

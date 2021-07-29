@@ -14,17 +14,17 @@ void	push_pop()
 	// ft::vector<int>::iterator	end2 = v2.end();
 
     if (*it1 == *it2 && *it1 + 1 == *it2 + 1 && *it1 + 3 == *it2 + 3)
-		{ std::cout << "Push :\t\e[0;32m[⭐️]\e[0m\t"; }
+		{ std::cout << "Push :\t\t\e[0;32m[⭐️]\e[0m\t"; }
 	else
-		{ std::cout << "Push :\t\e[0;31m[💥]\e[0m\t"; }
+		{ std::cout << "Push :\t\t\e[0;31m[💥]\e[0m\t"; }
     
     v1.pop_back(); v1.pop_back(); v1.pop_back();
 	v2.pop_back(); v2.pop_back(); v2.pop_back();
 
     if (v1.empty() && v2.empty())
-		{ std::cout << "Pop :\t\e[0;32m[⭐️]\e[0m\t"; }
+		{ std::cout << "Pop :\t\t\e[0;32m[⭐️]\e[0m\t"; }
 	else
-		{ std::cout << "Pop :\t\e[0;31m[💥]\e[0m\t"; }
+		{ std::cout << "Pop :\t\t\e[0;31m[💥]\e[0m\t"; }
 
     std::cout << "\n\n";
 }

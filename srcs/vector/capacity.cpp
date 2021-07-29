@@ -25,9 +25,9 @@ void	check_content(std::vector<int> &v1, ft::vector<int> &v2)
 void	check_size(std::vector<int> &v1, ft::vector<int> &v2)
 {
 	if (v1.size() != v2.size())
-		std::cout << "Size :\t\e[0;31m[💥]\e[0m\t"; //[REAL] " << v1.size() << " [YOURS] " << v2.size() << "\n";
+		std::cout << "Size :\t\t\e[0;31m[💥]\e[0m\t"; //[REAL] " << v1.size() << " [YOURS] " << v2.size() << "\n";
 	else
-		std::cout << "Size :\t\e[0;32m[⭐️]\e[0m\t";
+		std::cout << "Size :\t\t\e[0;32m[⭐️]\e[0m\t";
 }
 
 void	check_capacity(std::vector<int> &v1, ft::vector<int> &v2)
