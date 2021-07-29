@@ -9,6 +9,7 @@ int main(void)
 	std::cout << "3️⃣  Begin & end\n";
 	begin_end();
 	// std::cout << "4️⃣  Rbegin & rend\n\n";
+	// rbegin_rend();
 	std::cout << "5️⃣  Size, max_size, capacity, empty\n";
 	capacity();
 	std::cout << "6️⃣  Reserve & resize\n";
@@ -21,9 +22,10 @@ int main(void)
 	insert_erase();
 	std::cout << "🔟  Swap\n";
 	swap();
-	std::cout << "1️⃣1️⃣  Clear\n\n";
+	std::cout << "1️⃣ 1️⃣  Clear\n\n";
 	clear();
-	// std::cout << "1️⃣2️⃣  Get allocator\n\n";
+	std::cout << "1️⃣ 2️⃣  Get allocator\n\n";
+	get_allocator();
 
 	return 0;
 }

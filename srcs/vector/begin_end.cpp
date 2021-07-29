@@ -27,3 +27,23 @@ void	begin_end()
 		{ std::cout << "End :\t\t\e[0;31m[💥]\e[0m\t"; }
     std::cout << "\n\n";
 }
+
+// void	rbegin_rend()
+// {
+// 	std::vector<int>	v1(5);
+// 	ft::vector<int>		v2(5);
+
+// 	int i = 0;
+
+// 	std::vector<int>::reverse_iterator	rit1 = v1.rbegin();
+// 	ft::vector<int>::reverse_iterator	rit2 = v2.rbegin();
+// 	for (; rit1 !=  v1.rend(); ++rit1)
+// 		*rit1 = ++i;
+// 	for (; rit2 !=  v2.rend(); ++rit2)
+// 		*rit2 = ++i;
+// 	check_size(v1, v2);
+// 	check_capacity(v1, v2);
+// 	check_content(v1, v2);
+
+// 	std::cout << "\n\n";
+// }

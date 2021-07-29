@@ -13,6 +13,7 @@
 # include "../srcs/vector/swap.cpp"
 # include "../srcs/vector/constructors.cpp"
 # include "../srcs/vector/clear.cpp"
+# include "../srcs/vector/get_allocator.cpp"
 
 void	check_content(std::vector<int> &v1, ft::vector<int> &v2);
 void	check_size(std::vector<int> &v1, ft::vector<int> &v2);
@@ -28,6 +29,7 @@ void	insert_erase(void);
 void	swap(void);
 void    constructors(void);
 void    clear(void);
+void    get_allocator();
 int     main(void);
 
 #endif
