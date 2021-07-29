@@ -21,7 +21,8 @@ int main(void)
 	insert_erase();
 	std::cout << "🔟  Swap\n";
 	swap();
-	// std::cout << "1️⃣1️⃣  Clear\n\n";
+	std::cout << "1️⃣1️⃣  Clear\n\n";
+	clear();
 	// std::cout << "1️⃣2️⃣  Get allocator\n\n";
 
 	return 0;

@@ -12,6 +12,7 @@
 # include "../srcs/vector/insert_erase.cpp"
 # include "../srcs/vector/swap.cpp"
 # include "../srcs/vector/constructors.cpp"
+# include "../srcs/vector/clear.cpp"
 
 void	check_content(std::vector<int> &v1, ft::vector<int> &v2);
 void	check_size(std::vector<int> &v1, ft::vector<int> &v2);
@@ -26,6 +27,7 @@ void	push_pop(void);
 void	insert_erase(void);
 void	swap(void);
 void    constructors(void);
+void    clear(void);
 int     main(void);
 
 #endif
