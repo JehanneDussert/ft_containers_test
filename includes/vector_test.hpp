@@ -10,6 +10,7 @@
 # include "../srcs/vector/reserve_resize.cpp"
 # include "../srcs/vector/push_pop.cpp"
 # include "../srcs/vector/insert_erase.cpp"
+# include "../srcs/vector/swap.cpp"
 
 void	check_content(std::vector<int> &v1, ft::vector<int> &v2);
 void	check_size(std::vector<int> &v1, ft::vector<int> &v2);
@@ -22,6 +23,7 @@ void	capacity(void);
 void	reserve_resize(void);
 void	push_pop(void);
 void	insert_erase(void);
+void	swap(void);
 int     main(void);
 
 #endif

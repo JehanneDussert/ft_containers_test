@@ -18,7 +18,8 @@ int main(void)
 	push_pop();
 	std::cout << "9️⃣  Insert & erase\n";
 	insert_erase();
-	// std::cout << "🔟  Swap x 2\n\n";
+	std::cout << "🔟  Swap\n";
+	swap();
 	// std::cout << "1️⃣1️⃣  Clear\n\n";
 	// std::cout << "1️⃣2️⃣  Get allocator\n\n";
 

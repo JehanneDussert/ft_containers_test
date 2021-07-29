@@ -37,5 +37,5 @@ void	insert_erase()
     else
 		std::cout << "Erase :\t\t\e[0;31m[💥]\e[0m\t";
 
-    std::cout << std::endl;
+    std::cout << "\n\n";
 }
