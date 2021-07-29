@@ -2,7 +2,8 @@
 
 int main(void)
 {
-	// std::cout << "1️⃣  Constructors\n\n";
+	std::cout << "1️⃣  Constructors\n\n";
+	constructors();
 	std::cout << "2️⃣  Operators\n";
 	operators_test();
 	std::cout << "3️⃣  Begin & end\n";
