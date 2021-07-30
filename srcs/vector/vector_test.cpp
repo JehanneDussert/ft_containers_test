@@ -14,17 +14,19 @@ int main(void)
 	capacity();
 	std::cout << "6️⃣  Reserve & resize\n";
 	reserve_resize();
-	std::cout << "7️⃣  Assign\n";
+	std::cout << "7️⃣  Element access\n";
+	access();
+	std::cout << "8️⃣ Assign\n";
 	assign_test();
-	std::cout << "8️⃣  Push_back & pop_back\n";
+	std::cout << "9️⃣  Push_back & pop_back\n";
 	push_pop();
-	std::cout << "9️⃣  Insert & erase\n";
+	std::cout << "🔟  Insert & erase\n";
 	insert_erase();
-	std::cout << "🔟  Swap\n";
+	std::cout << "1️⃣ 1️⃣  Swap\n";
 	swap();
-	std::cout << "1️⃣ 1️⃣  Clear\n\n";
+	std::cout << "1️⃣ 2️⃣  Clear\n\n";
 	clear();
-	std::cout << "1️⃣ 2️⃣  Get allocator\n\n";
+	std::cout << "1️⃣ 3️⃣  Get allocator\n\n";
 	get_allocator();
 
 	return 0;
