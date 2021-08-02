@@ -27,9 +27,9 @@ void	at()
         if (v1.at(i) != i)
 			err++;
 	if (!err)
-		std::cout << "At :\t\e[0;32m[⭐️";
+		std::cout << "At :\t\t\e[0;32m[⭐️";
 	else
-		std::cout << "At :\t\e[0;31m[💥";
+		std::cout << "At :\t\t\e[0;31m[💥";
 
 	try 
 	{
@@ -76,11 +76,11 @@ void	const_at()
 	try 
 	{
 		std::cout << v1.at(20);
-		std::cout << "Const_at :\t\e[0;32m[💥";
+		std::cout << "\t\tConst_at :\t\e[0;32m[💥";
 	}
 	catch (const std::out_of_range& oor)
 	{
-		std::cout << "Const_at :\t\e[0;32m[⭐️";
+		std::cout << "\t\tConst_at :\t\e[0;32m[⭐️";
   	}
 	try 
 	{
@@ -126,9 +126,9 @@ void    front()
 	ft::vector<int>				v2(5, 3);
 
 	if (v1.front() == v1[0])
-		std::cout << "Front :\t\e[0;32m[⭐️";
+		std::cout << "Front :\t\t\e[0;32m[⭐️";
 	else
-		std::cout << "Front :\t\e[0;31m[💥";
+		std::cout << "Front :\t\t\e[0;31m[💥";
 	
 	v1.insert(v1.begin(), *v2.begin());
 	if (v1.front() == *v2.begin())
@@ -143,9 +143,9 @@ void    back()
 	ft::vector<int>				v2(5, 3);
 
 	if (v1.back() == *(v1.end() - 1))
-		std::cout << "\tBack :\t\t\e[0;32m[⭐️";
+		std::cout << "\t\t\tBack :\t\t\e[0;32m[⭐️";
 	else
-		std::cout << "\tBack :\t\t\e[0;31m[💥";
+		std::cout << "\t\t\tBack :\t\t\e[0;31m[💥";
 	
 	v1.insert(v1.end(), *v2.begin());
 	if (v1.back() == *v2.begin())

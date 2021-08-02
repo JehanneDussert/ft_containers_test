@@ -54,7 +54,7 @@ void	swap()
     {
         if (*it1 != *it3)
 		    err++;
-        ++it3;
+        it3++;
     }
     if (!err)
 		std::cout << "swap(x, y) :\t\e[0;32m[⭐️]\e[0m\t";
@@ -74,7 +74,7 @@ void	swap()
     {
         if (*it1 != *it5)
 		    err++;
-        ++it5;
+        it5++;
     }
     if (!err)
 		std::cout << "swap(x, y) :\t\e[0;32m[⭐️]\e[0m\t";

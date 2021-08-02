@@ -27,10 +27,11 @@ void	insert_erase()
 	v2.erase(v2.begin() + 1, v2.begin() + 4);
 
     ft::vector<int>::iterator	it = v2.begin();
-	for (std::vector<int>::iterator	it1 = v1.begin(); it1 != v1.end(); ++ it1)
+	for (std::vector<int>::iterator	it1 = v1.begin(); it1 != v1.end(); ++it1)
     {
         if (*it1 != *it)
 		    err++;
+        it++;
     }
     if (!err)
 		std::cout << "Erase :\t\t\e[0;32m[⭐️]\e[0m\t";
