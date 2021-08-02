@@ -2,7 +2,7 @@
 #include <list>
 
 #define TESTED_NAMESPACE ft
-#define TESTED_TYPE int
+#define TESTED_TYPE std::string
 
 template <typename T>
 void	printSize(TESTED_NAMESPACE::vector<T> const &vct, bool print_content = 1)
