@@ -44,21 +44,6 @@ void	constructors()
         std::cout << "Fill :\t\t\e[0;31m[💥]\e[0m\t"; 
     
     err = 0;
-    if (std_range.size() != ft_range.size() || std_range.capacity() != ft_range.capacity() || std_range.max_size() != ft_range.max_size())
-		err++;
-	ft::vector<int>::iterator	it4 = ft_range.begin();
-	for (std::vector<int>::iterator	it1 = std_range.begin(); it1 != std_range.end(); ++it1)
-    {
-        if (*it1 != *it4)
-		    err++;
-        ++it4;
-    }
-    if (!err)
-		std::cout << "Range :\t\t\e[0;32m[⭐️]\e[0m\t";
-    else
-        std::cout << "Range :\t\t\e[0;31m[💥]\e[0m\t"; 
-    
-    err = 0;
     if (std_copy.size() != ft_copy.size() || std_copy.capacity() != ft_copy.capacity() || std_copy.max_size() != ft_copy.max_size())
 		err++;
 	ft::vector<int>::iterator	it5 = ft_copy.begin();
@@ -72,6 +57,21 @@ void	constructors()
 		std::cout << "Copy :\t\t\e[0;32m[⭐️]\e[0m\t";
     else
         std::cout << "Copy :\t\t\e[0;31m[💥]\e[0m\t"; 
+
+    err = 0;
+    if (std_range.size() != ft_range.size() || std_range.capacity() != ft_range.capacity() || std_range.max_size() != ft_range.max_size())
+		err++;
+	ft::vector<int>::iterator	it4 = ft_range.begin();
+	for (std::vector<int>::iterator	it1 = std_range.begin(); it1 != std_range.end(); ++it1)
+    {
+        if (*it1 != *it4)
+		    err++;
+        ++it4;
+    }
+    if (!err)
+		std::cout << "Range :\t\t\e[0;32m[⭐️]\e[0m\t";
+    else
+        std::cout << "Range :\t\t\e[0;31m[💥]\e[0m\t"; 
 
 	err = 0;
 	std::cout << "\n\n📍 ITERATOR\n";
@@ -92,16 +92,29 @@ void	constructors()
     else
         std::cout << "Fill :\t\t\e[0;31m[💥]\e[0m\t"; 
 
-	err = 0;
+    err = 0;
+    std::vector<int>::iterator	std_it_copy(std_it_val);
+    ft::vector<int>::iterator	ft_it_copy(ft_it_val);
+	for (; std_it_copy != std_fill.end(); ++std_it_copy)
+    {
+        if (*std_it_copy != *ft_it_copy)
+		    err++;
+        ++ft_it_copy;
+    }
+	if (!err)
+		std::cout << "Copy :\t\t\e[0;32m[⭐️]\e[0m\t";
+    else
+        std::cout << "Copy :\t\t\e[0;31m[💥]\e[0m\t"; 
 
+	err = 0;
 	std::cout << "\n\n📍 CONST_ITERATOR\n";
-    std::vector<int>::iterator	std_const_it;
-    ft::vector<int>::iterator	ft_const_it;
+    std::vector<int>::const_iterator	std_const_it;
+    ft::vector<int>::const_iterator	    ft_const_it;
 	std::cout << "Default :\t\e[0;32m[⭐️]\e[0m\t";
 
 	err = 0;
-    std::vector<int>::iterator	std_const_it_val(std_fill.begin());
-    ft::vector<int>::iterator	ft_const_it_val(ft_fill.begin());
+    std::vector<int>::const_iterator	std_const_it_val(std_fill.begin());
+    ft::vector<int>::const_iterator	ft_const_it_val(ft_fill.begin());
 	for (; std_const_it_val != std_fill.end(); ++std_const_it_val)
     {
         if (*std_const_it_val != *ft_const_it_val)
@@ -112,6 +125,54 @@ void	constructors()
 		std::cout << "Fill :\t\t\e[0;32m[⭐️]\e[0m\t";
     else
         std::cout << "Fill :\t\t\e[0;31m[💥]\e[0m\t"; 
+
+    err = 0;
+    std::vector<int>::const_iterator	std_const_it_copy(std_const_it_val);
+    ft::vector<int>::const_iterator	ft_const_it_copy(ft_const_it_val);
+	for (; std_const_it_copy != std_fill.end(); ++std_const_it_copy)
+    {
+        if (*std_const_it_copy != *ft_const_it_copy)
+		    err++;
+        ++ft_const_it_copy;
+    }
+	if (!err)
+		std::cout << "Copy :\t\t\e[0;32m[⭐️]\e[0m\t";
+    else
+        std::cout << "Copy :\t\t\e[0;31m[💥]\e[0m\t"; 
+
+    err = 0;
+	std::cout << "\n\n📍 REVERSE_ITERATOR\n";
+    std::vector<int>::reverse_iterator	    std_rev_it;
+    ft::vector<int>::reverse_iterator	    ft_rev_it;
+	std::cout << "Default :\t\e[0;32m[⭐️]\e[0m\t";
+
+	err = 0;
+    std::vector<int>::reverse_iterator	std_rev_it_val(std_fill.rbegin());
+    ft::vector<int>::reverse_iterator	ft_rev_it_val(ft_fill.rbegin());
+	for (; std_rev_it_val != std_fill.rend(); ++std_rev_it_val)
+    {
+        if (*std_rev_it_val != *ft_rev_it_val)
+		    err++;
+        ++ft_rev_it_val;
+    }
+	if (!err)
+		std::cout << "Fill :\t\t\e[0;32m[⭐️]\e[0m\t";
+    else
+        std::cout << "Fill :\t\t\e[0;31m[💥]\e[0m\t"; 
+
+    err = 0;
+    std::vector<int>::reverse_iterator	std_rev_it_copy(std_rev_it_val);
+    ft::vector<int>::reverse_iterator	ft_rev_it_copy(ft_rev_it_val);
+	for (; std_rev_it_copy != std_fill.rend(); ++std_rev_it_copy)
+    {
+        if (*std_rev_it_copy != *ft_rev_it_copy)
+		    err++;
+        ++ft_rev_it_copy;
+    }
+	if (!err)
+		std::cout << "Copy :\t\t\e[0;32m[⭐️]\e[0m\t";
+    else
+        std::cout << "Copy :\t\t\e[0;31m[💥]\e[0m\t"; 
 
     std::cout << "\n\n";
 }

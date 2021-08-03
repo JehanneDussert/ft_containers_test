@@ -15,6 +15,7 @@
 # include "../srcs/vector/clear.cpp"
 # include "../srcs/vector/get_allocator.cpp"
 # include "../srcs/vector/access.cpp"
+# include "../srcs/vector/reverse_iterator.cpp"
 
 void	check_content(std::vector<int> &v1, ft::vector<int> &v2);
 void	check_size(std::vector<int> &v1, ft::vector<int> &v2);
@@ -33,6 +34,7 @@ void    clear(void);
 void    get_allocator();
 void    access(void);
 void	rbegin_rend();
+void	reverse_iterator();
 int     main(void);
 
 #endif
