@@ -28,22 +28,20 @@ void	begin_end()
     std::cout << "\n\n";
 }
 
-// void	rbegin_rend()
-// {
-// 	std::vector<int>	v1(5);
-// 	ft::vector<int>		v2(5);
+void	rbegin_rend()
+{
+	std::vector<int>	v1(5);
+	ft::vector<int>		v2(5);
 
-// 	int i = 0;
+	std::vector<int>::reverse_iterator	rit1 = v1.rbegin();
+	ft::vector<int>::reverse_iterator	rit2 = v2.rbegin();
+	for (int i = 0; rit1 !=  v1.rend(); ++rit1)
+		*rit1 = ++i;
+	for (int i = 0; rit2 !=  v2.rend(); ++rit2)
+		*rit2 = ++i;
+	check_size(v1, v2);
+	check_capacity(v1, v2);
+	check_content(v1, v2);
 
-// 	std::vector<int>::reverse_iterator	rit1 = v1.rbegin();
-// 	ft::vector<int>::reverse_iterator	rit2 = v2.rbegin();
-// 	for (; rit1 !=  v1.rend(); ++rit1)
-// 		*rit1 = ++i;
-// 	for (; rit2 !=  v2.rend(); ++rit2)
-// 		*rit2 = ++i;
-// 	check_size(v1, v2);
-// 	check_capacity(v1, v2);
-// 	check_content(v1, v2);
-
-// 	std::cout << "\n\n";
-// }
+	std::cout << "\n\n";
+}

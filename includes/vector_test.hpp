@@ -32,6 +32,7 @@ void    constructors(void);
 void    clear(void);
 void    get_allocator();
 void    access(void);
+void	rbegin_rend();
 int     main(void);
 
 #endif
