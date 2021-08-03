@@ -2,7 +2,7 @@
 #include <list>
 
 #define TESTED_NAMESPACE ft
-#define TESTED_TYPE std::string
+#define TESTED_TYPE int
 
 template <typename T>
 void	printSize(TESTED_NAMESPACE::vector<T> const &vct, bool print_content = 1)
@@ -46,33 +46,33 @@ std::ostream	&operator<<(std::ostream &o, foo const &bar) {
 // 	printSize(vct);
 // }
 
-void	is_empty(TESTED_NAMESPACE::vector<TESTED_TYPE> const &vct)
-{
-	std::cout << "is_empty: " << vct.empty() << std::endl;
-}
+// void	is_empty(TESTED_NAMESPACE::vector<TESTED_TYPE> const &vct)
+// {
+// 	std::cout << "is_empty: " << vct.empty() << std::endl;
+// }
 
-void	prepost_incdec(TESTED_NAMESPACE::vector<TESTED_TYPE> &vct)
-{
-	TESTED_NAMESPACE::vector<TESTED_TYPE>::iterator it = vct.begin();
-	TESTED_NAMESPACE::vector<TESTED_TYPE>::iterator it_tmp;
+// void	prepost_incdec(TESTED_NAMESPACE::vector<TESTED_TYPE> &vct)
+// {
+// 	TESTED_NAMESPACE::vector<TESTED_TYPE>::iterator it = vct.begin();
+// 	TESTED_NAMESPACE::vector<TESTED_TYPE>::iterator it_tmp;
 
-	std::cout << "Pre inc" << std::endl;
-	it_tmp = ++it;
-	std::cout << *it_tmp << " | " << *it << std::endl;
+// 	std::cout << "Pre inc" << std::endl;
+// 	it_tmp = ++it;
+// 	std::cout << *it_tmp << " | " << *it << std::endl;
 
-	std::cout << "Pre dec" << std::endl;
-	it_tmp = --it;
-	std::cout << *it_tmp << " | " << *it << std::endl;
+// 	std::cout << "Pre dec" << std::endl;
+// 	it_tmp = --it;
+// 	std::cout << *it_tmp << " | " << *it << std::endl;
 
-	std::cout << "Post inc" << std::endl;
-	it_tmp = it++;
-	std::cout << *it_tmp << " | " << *it << std::endl;
+// 	std::cout << "Post inc" << std::endl;
+// 	it_tmp = it++;
+// 	std::cout << *it_tmp << " | " << *it << std::endl;
 
-	std::cout << "Post dec" << std::endl;
-	it_tmp = it--;
-	std::cout << *it_tmp << " | " << *it << std::endl;
-	std::cout << "###############################################" << std::endl;
-}
+// 	std::cout << "Post dec" << std::endl;
+// 	it_tmp = it--;
+// 	std::cout << *it_tmp << " | " << *it << std::endl;
+// 	std::cout << "###############################################" << std::endl;
+// }
 
 int		main(void)
 {
@@ -82,8 +82,8 @@ int		main(void)
 	operators_test();
 	std::cout << "3️⃣  Begin & end\n";
 	begin_end();
-	// std::cout << "4️⃣  Rbegin & rend\n\n";
-	// rbegin_rend();
+	std::cout << "4️⃣  Rbegin & rend\n\n";
+	rbegin_rend();
 	std::cout << "5️⃣  Size, max_size, capacity, empty\n";
 	capacity();
 	std::cout << "6️⃣  Reserve & resize\n";
@@ -102,6 +102,44 @@ int		main(void)
 	clear();
 	std::cout << "1️⃣ 3️⃣  Get allocator\n\n";
 	get_allocator();
+
+	// const int size = 5;
+	// TESTED_NAMESPACE::vector<TESTED_TYPE> vct(size);
+	// TESTED_NAMESPACE::vector<TESTED_TYPE>::reverse_iterator it(vct.rbegin());
+	// TESTED_NAMESPACE::vector<TESTED_TYPE>::const_reverse_iterator ite(vct.rend());
+
+	// for (int i = 1; it != ite; ++i)
+	// 	*it++ = (i * 7);
+	// printSize(vct, 1);
+
+	// it = vct.rbegin();
+	// ite = vct.rbegin();
+
+	// std::cout << *(++ite) << std::endl;
+	// std::cout << *(ite++) << std::endl;
+	// std::cout << *ite++ << std::endl;
+	// std::cout << *++ite << std::endl;
+
+	// it->m();
+	// ite->m();
+
+	// std::cout << *(++it) << std::endl;
+	// std::cout << *(it++) << std::endl;
+	// std::cout << *it++ << std::endl;
+	// std::cout << *++it << std::endl;
+
+	// std::cout << *(--ite) << std::endl;
+	// std::cout << *(ite--) << std::endl;
+	// std::cout << *--ite << std::endl;
+	// std::cout << *ite-- << std::endl;
+
+	// (*it).m();
+	// (*ite).m();
+
+	// std::cout << *(--it) << std::endl;
+	// std::cout << *(it--) << std::endl;
+	// std::cout << *it-- << std::endl;
+	// std::cout << *--it << std::endl;
 
 	return 0;
 }
