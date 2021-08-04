@@ -1,7 +1,9 @@
 #include "../../includes/vector_test.hpp"
 
-void	swap()
+int main(void)
 {
+	std::cout << "1️⃣ 1️⃣  Swap\n";
+
 	std::vector<int>			v1(10, 8);
 	std::vector<int>			v2(8, 10);
 	ft::vector<int>				v3(10, 8);

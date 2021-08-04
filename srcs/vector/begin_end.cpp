@@ -43,5 +43,15 @@ void	rbegin_rend()
 	check_capacity(v1, v2);
 	check_content(v1, v2);
 
-	std::cout << "\n\n";
+	std::cout << "\n";
+}
+
+int main(void)
+{
+	std::cout << "3️⃣  Begin & end\n";
+	begin_end();
+	std::cout << "4️⃣  Rbegin & rend\n";
+	rbegin_rend();
+
+	return 0;
 }

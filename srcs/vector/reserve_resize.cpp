@@ -1,7 +1,9 @@
 #include "../../includes/vector_test.hpp"
 
-void	reserve_resize()
+int main(void)
 {
+	std::cout << "6️⃣  Reserve & resize\n";
+
 	std::vector<int>			v1(2, 8);
 	ft::vector<int>				v2(2, 8);
 

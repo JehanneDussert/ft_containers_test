@@ -1,7 +1,9 @@
 #include "../../includes/vector_test.hpp"
 
-void	clear()
+int main(void)
 {
+	std::cout << "1️⃣ 2️⃣  Clear\n\n";
+
 	std::vector<int>			v1(10, 8);
 	ft::vector<int>				v2(10, 8);
 

@@ -1,7 +1,9 @@
 #include "../../includes/vector_test.hpp"
 
-void	get_allocator()
+int main(void)
 {
+	std::cout << "1️⃣ 3️⃣  Get allocator\n";
+
 	std::vector<int> v1;
 	int * p1;
 	unsigned int i;

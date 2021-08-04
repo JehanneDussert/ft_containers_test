@@ -12,9 +12,9 @@ struct is_const_iterator
     static const bool value = is_const_pointer<Pointer>::value;
 };
 
-void	constructors()
+void    vector(void)
 {
-	std::cout << "\n📍 VECTOR\n";
+    std::cout << "\n📍 VECTOR\n";
     int err = 0;
 	std::vector<int>			std_default;
 	std::vector<int>			std_fill(8, 10);
@@ -84,13 +84,18 @@ void	constructors()
 		std::cout << "Range :\t\t\e[0;32m[⭐️]\e[0m\t";
     else
         std::cout << "Range :\t\t\e[0;31m[💥]\e[0m\t"; 
+}
 
-	err = 0;
+void    iterator(void)
+{
+    int err = 0;
 	std::cout << "\n\n📍 ITERATOR\n";
     std::vector<int>::iterator	std_it;
     ft::vector<int>::iterator	ft_it;
 	std::cout << "Default :\t\e[0;32m[⭐️]\e[0m\t";
 
+	std::vector<int>			        std_fill(8, 10);
+	ft::vector<int>			            ft_fill(8, 10);
     std::vector<int>::iterator			std_it_val(std_fill.begin());
     ft::vector<int>::iterator			ft_it_val(ft_fill.begin());
 	for (; std_it_val != std_fill.end(); ++std_it_val)
@@ -128,14 +133,20 @@ void	constructors()
 		std::cout << "Type :\t\t\e[0;32m[⭐️]\e[0m\t";
 	else
 		std::cout << "Type :\t\t\e[0;31m[💥]\e[0m\t";
+}
 
-	err = 0;
+void    const_iterator(void)
+{
+    int err = 0;
 	std::cout << "\n\n📍 CONST_ITERATOR\n";
     std::vector<int>::const_iterator	std_const_it;
     ft::vector<int>::const_iterator	    ft_const_it;
 	std::cout << "Default :\t\e[0;32m[⭐️]\e[0m\t";
 
 	err = 0;
+
+	std::vector<int>			        std_fill(8, 10);
+	ft::vector<int>			            ft_fill(8, 10);
     std::vector<int>::const_iterator	std_const_it_val(std_fill.begin());
     ft::vector<int>::const_iterator     ft_const_it_val(ft_fill.begin());
 	for (; std_const_it_val != std_fill.end(); ++std_const_it_val)
@@ -172,14 +183,19 @@ void	constructors()
 		std::cout << "Type :\t\t\e[0;32m[⭐️]\e[0m\t";
 	else
 		std::cout << "Type :\t\t\e[0;31m[💥]\e[0m\t";
+}
 
-    err = 0;
+void    reverse_iterator(void)
+{
+    int err = 0;
 	std::cout << "\n\n📍 REVERSE_ITERATOR\n";
     std::vector<int>::reverse_iterator	    std_rev_it;
     ft::vector<int>::reverse_iterator	    ft_rev_it;
 	std::cout << "Default :\t\e[0;32m[⭐️]\e[0m\t";
 
 	err = 0;
+	std::vector<int>			        std_fill(8, 10);
+	ft::vector<int>			            ft_fill(8, 10);
     std::vector<int>::reverse_iterator	std_rev_it_val(std_fill.rbegin());
     ft::vector<int>::reverse_iterator	ft_rev_it_val(ft_fill.rbegin());
 	for (; std_rev_it_val != std_fill.rend(); ++std_rev_it_val)
@@ -207,6 +223,8 @@ void	constructors()
     else
         std::cout << "Copy :\t\t\e[0;31m[💥]\e[0m\t"; 
 
+	typedef std::vector<int>::iterator			std_it_type;
+	typedef ft::vector<int>::iterator			ft_it_type;
 	typedef std::vector<int>::iterator			std_rev_it_type;
 	typedef ft::vector<int>::iterator			ft_rev_it_type;
     typedef std_it_type::pointer				std_rev_pointer;
@@ -216,6 +234,17 @@ void	constructors()
 		std::cout << "Type :\t\t\e[0;32m[⭐️]\e[0m\t";
 	else
 		std::cout << "Type :\t\t\e[0;31m[💥]\e[0m\t";
+}
+
+int main(void)
+{
+    std::cout << "1️⃣  Constructors\n";
+	vector();
+    iterator();
+    const_iterator();
+    reverse_iterator();
 
     std::cout << "\n\n";
+
+    return 0;
 }

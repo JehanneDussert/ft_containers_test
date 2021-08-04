@@ -278,8 +278,9 @@ void	reverse_iterator_op()
 	std::cout << "\n\n";
 }
 
-void	operators_test(void)
+int	main(void)
 {
+	std::cout << "2️⃣  Operators\n";
 	vector();
 	iterator();
 	const_iterator();

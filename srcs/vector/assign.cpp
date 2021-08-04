@@ -1,7 +1,9 @@
 #include "../../includes/vector_test.hpp"
 
-void	assign_test()
+int main(void)
 {
+	std::cout << "8️⃣  Assign\n\n";
+
 	std::vector<int>			v1;
 	ft::vector<int>				v2;
 

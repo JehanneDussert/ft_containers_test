@@ -1,7 +1,9 @@
 #include "../../includes/vector_test.hpp"
 
-void	push_pop()
+int main(void)
 {
+	std::cout << "9️⃣  Push_back & pop_back\n";
+
 	std::vector<int>			v1;
 	ft::vector<int>				v2;
 

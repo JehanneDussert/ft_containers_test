@@ -1,7 +1,9 @@
 #include "../../includes/vector_test.hpp"
 
-void    reverse_iterator()
+int main(void)
 {
+	std::cout << "\n1️⃣ 4️⃣  Reverse iterator\n";
+
 	std::vector<int>					std_fill(20, 15);
 	ft::vector<int>						ft_fill(20, 15);
     std::vector<int>::reverse_iterator	std_rev_it(std_fill.rbegin());

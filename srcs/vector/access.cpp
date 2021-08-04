@@ -154,8 +154,9 @@ void    back()
 		std::cout << "💥]\e[0m\t";
 }
 
-void    access(void)
+int main(void)
 {
+	std::cout << "7️⃣  Element access\n";
     at();
 	const_at();
 	std::cout << std::endl;

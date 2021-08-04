@@ -1,7 +1,9 @@
 #include "../../includes/vector_test.hpp"
 
-void	insert_erase()
+int main(void)
 {
+	std::cout << "🔟  Insert & erase\n";
+
 	std::vector<int>			v1(10, 8);
 	ft::vector<int>				v2(10, 8);
     int err = 0;
