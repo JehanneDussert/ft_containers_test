@@ -1,5 +1,8 @@
 #include "../../../srcs/Stack/Stack_functions.hpp"
 #include <stack>
+#include <iostream>
+#include <string>
+#include <list>
 
 void	check_size(std::stack<int> &v1, ft::stack<int> &v2)
 {
