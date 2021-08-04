@@ -16,7 +16,7 @@ int		main(void)
 	reserve_resize();
 	std::cout << "7️⃣  Element access\n";
 	access();
-	std::cout << "8️⃣ Assign\n\n";
+	std::cout << "8️⃣  Assign\n\n";
 	assign_test();
 	std::cout << "9️⃣  Push_back & pop_back\n";
 	push_pop();

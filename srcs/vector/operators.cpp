@@ -205,8 +205,8 @@ void	reverse_iterator_op()
 {
 	std::cout << "📍 REVERSE_ITERATOR\n";
 
-	const ft::vector<int>				v1(10, 8);
-	const ft::vector<int>				v2(10, 8);
+	ft::vector<int>				        v1(10, 8);
+	ft::vector<int>				        v2(10, 8);
     ft::vector<int>::reverse_iterator	it1 = v1.rbegin();
 	ft::vector<int>::reverse_iterator	it2 = v2.rbegin();
 

@@ -137,7 +137,7 @@ void	constructors()
 
 	err = 0;
     std::vector<int>::const_iterator	std_const_it_val(std_fill.begin());
-    ft::vector<int>::const_iterator	ft_const_it_val(ft_fill.begin());
+    ft::vector<int>::const_iterator     ft_const_it_val(ft_fill.begin());
 	for (; std_const_it_val != std_fill.end(); ++std_const_it_val)
     {
         if (*std_const_it_val != *ft_const_it_val)
