@@ -2,7 +2,7 @@
 # define VECTOR_TEST_HPP
 
 # include <vector>
-# include "../../srcs/Vector_functions.hpp"
+# include "../../srcs/Vector/Vector_functions.hpp"
 # include "../srcs/vector/capacity.cpp"
 # include "../srcs/vector/assign.cpp"
 # include "../srcs/vector/operators.cpp"
