@@ -1,5 +1,17 @@
 #include "../../includes/vector_test.hpp"
 
+template<typename T>
+struct is_const_pointer { static const bool value = false; };
+
+template<typename T>
+struct is_const_pointer<const T*> { static const bool value = true; };
+
+template <typename TIterator, typename Pointer>
+struct is_const_iterator
+{
+    static const bool value = is_const_pointer<Pointer>::value;
+};
+
 void	constructors()
 {
 	std::cout << "\n📍 VECTOR\n";
@@ -104,7 +116,18 @@ void	constructors()
 	if (!err)
 		std::cout << "Copy :\t\t\e[0;32m[⭐️]\e[0m\t";
     else
-        std::cout << "Copy :\t\t\e[0;31m[💥]\e[0m\t"; 
+        std::cout << "Copy :\t\t\e[0;31m[💥]\e[0m\t";
+
+	typedef std::vector<int>::iterator			std_it_type;
+	typedef ft::vector<int>::iterator			ft_it_type;
+
+    typedef std_it_type::pointer				std_pointer;
+    typedef ft_it_type::pointer 				ft_pointer;
+
+    if (is_const_iterator<std_it_type, std_pointer>::value == is_const_iterator<ft_it_type, ft_pointer>::value)
+		std::cout << "Type :\t\t\e[0;32m[⭐️]\e[0m\t";
+	else
+		std::cout << "Type :\t\t\e[0;31m[💥]\e[0m\t";
 
 	err = 0;
 	std::cout << "\n\n📍 CONST_ITERATOR\n";
@@ -139,6 +162,16 @@ void	constructors()
 		std::cout << "Copy :\t\t\e[0;32m[⭐️]\e[0m\t";
     else
         std::cout << "Copy :\t\t\e[0;31m[💥]\e[0m\t"; 
+	
+    typedef std::vector<int>::const_iterator	std_const_it_type;
+    typedef ft::vector<int>::const_iterator		ft_const_it_type;
+    typedef std_const_it_type::pointer			std_const_pointer;
+    typedef ft_const_it_type::pointer			ft_const_pointer;
+	
+    if (is_const_iterator<std_const_it_type, std_const_pointer>::value == is_const_iterator<ft_const_it_type, ft_const_pointer>::value)
+		std::cout << "Type :\t\t\e[0;32m[⭐️]\e[0m\t";
+	else
+		std::cout << "Type :\t\t\e[0;31m[💥]\e[0m\t";
 
     err = 0;
 	std::cout << "\n\n📍 REVERSE_ITERATOR\n";
@@ -173,6 +206,16 @@ void	constructors()
 		std::cout << "Copy :\t\t\e[0;32m[⭐️]\e[0m\t";
     else
         std::cout << "Copy :\t\t\e[0;31m[💥]\e[0m\t"; 
+
+	typedef std::vector<int>::iterator			std_rev_it_type;
+	typedef ft::vector<int>::iterator			ft_rev_it_type;
+    typedef std_it_type::pointer				std_rev_pointer;
+    typedef ft_it_type::pointer 				ft_rev_pointer;
+
+    if (is_const_iterator<std_rev_it_type, std_rev_pointer>::value == is_const_iterator<ft_rev_it_type, ft_rev_pointer>::value)
+		std::cout << "Type :\t\t\e[0;32m[⭐️]\e[0m\t";
+	else
+		std::cout << "Type :\t\t\e[0;31m[💥]\e[0m\t";
 
     std::cout << "\n\n";
 }

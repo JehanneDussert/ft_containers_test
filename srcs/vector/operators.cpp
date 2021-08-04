@@ -119,9 +119,8 @@ void	iterator()
 	if (first[10] == 4)
 		{ std::cout << "operator[] :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t"; }
 	else
-		{ std::cout << "operator[] :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }	
-	
-	// ->
+		{ std::cout << "operator[] :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }
+
 	std::cout << "\n\n";
 
 }
@@ -197,9 +196,85 @@ void	const_iterator()
 	if (first[9] == 8)
 		{ std::cout << "operator[] :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t"; }
 	else
+		{ std::cout << "operator[] :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }
+
+	std::cout << "\n\n";
+}
+
+void	reverse_iterator_op()
+{
+	std::cout << "📍 REVERSE_ITERATOR\n";
+
+	const ft::vector<int>				v1(10, 8);
+	const ft::vector<int>				v2(10, 8);
+    ft::vector<int>::reverse_iterator	it1 = v1.rbegin();
+	ft::vector<int>::reverse_iterator	it2 = v2.rbegin();
+
+	if (*it1 == *it2)
+		{ std::cout << "operator* :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t"; }
+	else
+		{ std::cout << "operator* :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }
+    for (; it1 != v1.rend(); ++it1)
+        if (*it1 != *it2)
+            { std::cout << "operator++ :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }
+	if (it1 == v1.rend())
+    	{ std::cout << "operator++ :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t"; }
+    it1 = it2;
+    if (it1 != it2)   
+		{ std::cout << "operator= :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }
+	it1++;
+	if (it1 > it2 && !(it1 < it2) && it1 >= it2 && !(it1 <= it2))
+    {
+		std::cout << "operator> :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t";
+		std::cout << "operator< :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t";
+		std::cout << "\noperator>= :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t";
+		std::cout << "operator<= :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t";
+	}
+	else
+	{
+		std::cout << "operator> :\t"; std::cout << "\e[0;31m[💥]\e[0m\t";
+		std::cout << "operator< :\t"; std::cout << "\e[0;31m[💥]\e[0m\t";
+		std::cout << "\noperator>= :\t"; std::cout << "\e[0;31m[💥]\e[0m\t";
+		std::cout << "operator<= :\t"; std::cout << "\e[0;31m[💥]\e[0m\t";
+	}
+
+	it1 = it2;
+
+	if (it1 == it2 && !(it1 != it2))
+	{ 
+		std::cout << "operator== :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t";
+		std::cout << "operator!= :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t";
+	}
+	else
+	{ 
+		std::cout << "operator== :\t"; std::cout << "\e[0;31m[💥]\e[0m\t";
+		std::cout << "operator!= :\t"; std::cout << "\e[0;31m[💥]\e[0m\t";
+	}
+	++it1; --it1;
+	if (it1 == it2)
+		{ std::cout << "\noperator-- :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t"; }
+	else
+		{ std::cout << "\noperator-- :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }
+	it1 = v1.rbegin();
+
+    ft::vector<int>::reverse_iterator				first = v1.rbegin();	
+    ft::vector<int>::reverse_iterator				last = v1.rend();
+	first += 9;
+	if (*first == 8)
+		{ std::cout << "operator+= :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t"; }
+	else
+		{ std::cout << "operator+= :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }
+	first -= 9;
+	if (first == v1.rbegin())
+		{ std::cout << "operator-= :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t"; }
+	else
+		{ std::cout << "operator-= :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }
+	if (first[9] == 8)
+		{ std::cout << "operator[] :\t"; std::cout << "\e[0;32m[⭐️]\e[0m\t"; }
+	else
 		{ std::cout << "operator[] :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }	
 	
-	// ->
+
 	std::cout << "\n\n";
 }
 
@@ -208,4 +283,5 @@ void	operators_test(void)
 	vector();
 	iterator();
 	const_iterator();
+	reverse_iterator_op();
 }
