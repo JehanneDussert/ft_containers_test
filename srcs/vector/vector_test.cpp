@@ -8,7 +8,7 @@ int		main(void)
 	operators_test();
 	std::cout << "3️⃣  Begin & end\n";
 	begin_end();
-	std::cout << "4️⃣  Rbegin & rend\n\n";
+	std::cout << "4️⃣  Rbegin & rend\n";
 	rbegin_rend();
 	std::cout << "5️⃣  Size, max_size, capacity, empty\n";
 	capacity();
@@ -16,7 +16,7 @@ int		main(void)
 	reserve_resize();
 	std::cout << "7️⃣  Element access\n";
 	access();
-	std::cout << "8️⃣ Assign\n";
+	std::cout << "8️⃣ Assign\n\n";
 	assign_test();
 	std::cout << "9️⃣  Push_back & pop_back\n";
 	push_pop();
@@ -26,9 +26,9 @@ int		main(void)
 	swap();
 	std::cout << "1️⃣ 2️⃣  Clear\n\n";
 	clear();
-	std::cout << "1️⃣ 3️⃣  Get allocator\n\n";
+	std::cout << "1️⃣ 3️⃣  Get allocator\n";
 	get_allocator();
-	std::cout << "\n1️⃣ 4️⃣  Reverse iterator\n\n";
+	std::cout << "\n1️⃣ 4️⃣  Reverse iterator\n";
 	reverse_iterator();
 
 	return 0;
