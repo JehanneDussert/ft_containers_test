@@ -67,5 +67,5 @@ int main(void)
 	else
 		std::cout << "Content :\t\t\e[0;31m[💥]\e[0m\t";
 
-	std::cout << std::endl;
+	std::cout << "\n\n";
 }

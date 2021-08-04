@@ -22,7 +22,7 @@ RED="\033[0;31m"
 GREEN="\032[0;31m"
 YELLOW="\133[0;31m"
 
-printf "\n\t\t\t\t${BOLD}VECTOR TEST${EOC}\n";
+printf "\n\t\t\t\t${BOLD}VECTOR TEST${EOC}\n\n";
 $CXX $CXXFLAGS srcs/vector/constructors.cpp && ./a.out
 $CXX $CXXFLAGS srcs/vector/operators.cpp && ./a.out
 $CXX $CXXFLAGS srcs/vector/begin_end.cpp && ./a.out
@@ -36,6 +36,13 @@ $CXX $CXXFLAGS srcs/vector/swap.cpp && ./a.out
 $CXX $CXXFLAGS srcs/vector/clear.cpp && ./a.out
 $CXX $CXXFLAGS srcs/vector/get_allocator.cpp && ./a.out
 $CXX $CXXFLAGS srcs/vector/reverse_iterator.cpp && ./a.out
-# $CXX $CXXFLAGS srcs/vector/vector_test.cpp && ./a.out
-#$CXX $CXXFLAGS srcs/map/map_test.cpp && ./a.out
-#$CXX $CXXFLAGS srcs/stack_test.cpp && ./a.out
+
+
+printf "\n\t\t\t\t${BOLD}STACK TEST${EOC}\n\n";
+$CXX $CXXFLAGS srcs/stack/constructor.cpp && ./a.out
+$CXX $CXXFLAGS srcs/stack/empty.cpp && ./a.out
+$CXX $CXXFLAGS srcs/stack/size.cpp && ./a.out
+$CXX $CXXFLAGS srcs/stack/top.cpp && ./a.out
+$CXX $CXXFLAGS srcs/stack/push_pop.cpp && ./a.out
+$CXX $CXXFLAGS srcs/stack/operators.cpp && ./a.out
+#$CXX $CXXFLAGS srcs/map_test.cpp && ./a.out
