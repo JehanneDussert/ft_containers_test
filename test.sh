@@ -36,7 +36,7 @@ $CXX $CXXFLAGS srcs/vector/swap.cpp && ./a.out
 $CXX $CXXFLAGS srcs/vector/clear.cpp && ./a.out
 $CXX $CXXFLAGS srcs/vector/get_allocator.cpp && ./a.out
 $CXX $CXXFLAGS srcs/vector/reverse_iterator.cpp && ./a.out
-
+$CXX $CXXFLAGS srcs/vector/test_utils.cpp && ./a.out
 
 printf "\n\t\t\t\t${BOLD}STACK TEST${EOC}\n\n";
 $CXX $CXXFLAGS srcs/stack/constructor.cpp && ./a.out
