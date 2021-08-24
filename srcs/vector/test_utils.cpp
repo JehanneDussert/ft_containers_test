@@ -5,7 +5,7 @@ bool mycomp (char c1, char c2) { return std::tolower(c1)<std::tolower(c2); }
 void	iterator_traits()
 {
 	typedef std::iterator_traits<int*> traits;
-	typedef ft::vector<int>::iterator_traits<int*> traits1;
+	typedef ft::iterator_traits<int*> traits1;
 
 	if ((typeid(traits::iterator_category)==typeid(std::random_access_iterator_tag))
 		== (typeid(traits1::iterator_category)==typeid(std::random_access_iterator_tag)))
