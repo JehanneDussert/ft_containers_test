@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include <fstream>
 
 void	check_size(std::stack<int> &v1, ft::stack<int> &v2)
 {

@@ -1,0 +1,23 @@
+Push some values
+#################################
+empty:		0
+size:		6
+top:		5
+
+Push more values
+#################################
+empty:		0
+size:		12
+top:		6
+
+Pop some values
+#################################
+empty:		0
+size:		10
+top:		4
+
+Pop more values
+#################################
+empty:		0
+size:		8
+top:		2

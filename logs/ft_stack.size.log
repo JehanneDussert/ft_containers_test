@@ -1,0 +1,16 @@
+Check with an empty stack
+#################################
+empty:		1
+size:		0
+
+Push some values
+#################################
+empty:		0
+size:		6
+top:		5
+
+Pop some values
+#################################
+empty:		0
+size:		4
+top:		7

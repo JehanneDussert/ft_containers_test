@@ -31,3 +31,5 @@ a.out.dSYM/
 *.exe
 *.out
 *.app
+
+/logs/

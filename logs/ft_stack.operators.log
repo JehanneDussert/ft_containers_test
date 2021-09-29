@@ -1,0 +1,17 @@
+Check stack 1
+#################################
+empty:		0
+size:		6
+top:		6
+
+Check stack 2
+#################################
+empty:		0
+size:		1
+top:		1
+
+Check stack 3 -> copy of s1
+#################################
+empty:		0
+size:		6
+top:		6
