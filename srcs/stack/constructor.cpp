@@ -7,8 +7,8 @@ int main(void)
 	std::stack<int>	std_default;
 	ft::stack<int>	ft_default;
 
-	std::ofstream monFlux1("logs/ft_stack.constructor.log");
-	std::ofstream monFlux2("logs/std_stack.constructor.log");
+	std::ofstream monFlux1("logs/stack/ft_stack.constructor.log");
+	std::ofstream monFlux2("logs/stack/std_stack.constructor.log");
 
 	if (!(std_default.size() != ft_default.size() || std_default.empty() != ft_default.empty()))
 		std::cout << "\e[0;32m[⭐️]\e[0m\t";

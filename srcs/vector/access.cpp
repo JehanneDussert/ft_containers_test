@@ -1,25 +1,13 @@
 #include "../../includes/vector_test.hpp"
 
-void	printSize(ft::vector<int> const &vct, bool print_content = 1)
-{
-	std::cout << "size: " << vct.size() << std::endl;
-	std::cout << "capacity: " << vct.capacity() << std::endl;
-	// std::cout << "max_size: " << vct.max_size() << std::endl;
-	if (print_content)
-	{
-		ft::vector<int>::const_iterator it = vct.begin();
-		ft::vector<int>::const_iterator ite = vct.end();
-		std::cout << std::endl << "Content is:" << std::endl;
-		for (; it != ite; ++it)
-			std::cout << "- " << *it << std::endl;
-	}
-	std::cout << "###############################################" << std::endl;
-}
-
 void	at()
-{	
+{
 	ft::vector<int>				v1(10, 8);
+	std::vector<int>			v1(10, 8);
 	int err = 0;
+
+	std::ofstream monFlux1("logs/vector/ft_vector.access.log");
+	std::ofstream monFlux2("logs/vector/std_vector.access.log");
 
 	for (int i = 0; i < 10; i++)
         v1[i] = i;
@@ -156,12 +144,12 @@ void    back()
 
 int main(void)
 {
-	std::cout << "7️⃣  Element access\n";
+	std::cout << "element access\n";
     at();
 	const_at();
 	std::cout << std::endl;
     front();
     back();
 
-	std::cout << "\n\n";
+	std::cout << "\n";
 }

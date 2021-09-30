@@ -2,23 +2,39 @@
 
 int main(void)
 {
-	std::cout << "1️⃣ 2️⃣  Clear\t";
+	std::cout << "clear\t";
 
 	std::vector<int>			v1(10, 8);
 	ft::vector<int>				v2(10, 8);
+  int err = 0;
+	std::ofstream monFlux1("logs/vector/ft_vector.clear.log");
+	std::ofstream monFlux2("logs/vector/std_vector.clear.log");
 
     v1.clear(); v2.clear();
-    if (v1.empty() && v2.empty() && v1.size() == v2.size() && v1.capacity() == v2.capacity() && v1.max_size() == v2.max_size())
-		std::cout << "\e[0;32m[⭐️\e[0m";
+    err += check_size(v1, v2, monFlux1, monFlux2);
+	  err += check_capacity(v1, v2, monFlux1, monFlux2);
+	  err += check_content(v1, v2, monFlux1, monFlux2);
+    if (v1.empty() && v2.empty())
+		  ;
     else
-        std::cout << "\e[0;31m[💥\e[0m";
+        err++;
 
     v1.push_back(8); v2.push_back(8);
     v1.clear(); v2.clear();
-    if (v1.empty() && v2.empty() && v1.size() == v2.size() && v1.capacity() == v2.capacity() && v1.max_size() == v2.max_size())
-		std::cout << "\e[0;32m⭐️]\e[0m";
+    err += check_size(v1, v2, monFlux1, monFlux2);
+	  err += check_capacity(v1, v2, monFlux1, monFlux2);
+	  err += check_content(v1, v2, monFlux1, monFlux2);
+    if (v1.empty() && v2.empty())
+	    ;
     else
-        std::cout << "\e[0;31m💥]\e[0m";
+        err++;
+    
+    if (err)
+      std::cout << "\t\e[0;31m[💥]\e[0m";
+    else
+      std::cout << "\t\e[0;32m[⭐️]\e[0m";
 
-    std::cout << "\n\n";
+    std::cout << "\n";
+    monFlux1.close();
+    monFlux2.close();
 }

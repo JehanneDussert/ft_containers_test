@@ -275,12 +275,12 @@ void	reverse_iterator_op()
 		{ std::cout << "operator[] :\t"; std::cout << "\e[0;31m[💥]\e[0m\t"; }	
 	
 
-	std::cout << "\n\n";
+	std::cout << "\n";
 }
 
 int	main(void)
 {
-	std::cout << "2️⃣  Operators\n";
+	std::cout << "operators\n";
 	vector();
 	iterator();
 	const_iterator();

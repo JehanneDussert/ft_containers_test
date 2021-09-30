@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	std::cout << "\n1️⃣ 4️⃣  Reverse iterator\n";
+	std::cout << "\nreverse iterator\n";
 
 	std::vector<int>					std_fill(20, 15);
 	ft::vector<int>						ft_fill(20, 15);
@@ -67,5 +67,5 @@ int main(void)
 	else
 		std::cout << "Content :\t\t\e[0;31m[💥]\e[0m\t";
 
-	std::cout << "\n\n";
+	std::cout << "\n";
 }

@@ -75,13 +75,13 @@ void	equal()
 
 int main(void)
 {
-	std::cout << "\n1️⃣ 5️⃣  Utils\n";
+	std::cout << "\nutils\n";
 
 	iterator_traits();
 	equal();
 	is_integral();
 	lexicographical_compare();
 
-	std::cout << "\n\n";
+	std::cout << "\n";
 	return 0;
 }

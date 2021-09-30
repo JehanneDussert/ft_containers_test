@@ -7,8 +7,8 @@ int main(void)
 
 	std::stack<int>	std_default;
 	ft::stack<int>	ft_default;
-	std::ofstream monFlux1("logs/ft_stack.empty.log");
-	std::ofstream monFlux2("logs/std_stack.empty.log");
+	std::ofstream monFlux1("logs/stack/ft_stack.empty.log");
+	std::ofstream monFlux2("logs/stack/std_stack.empty.log");
 
 	if (ft_default.size() == std_default.size() && ft_default.empty())
 		;

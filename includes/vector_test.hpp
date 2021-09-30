@@ -4,9 +4,11 @@
 # include <vector>
 # include "../../srcs/Vector/Vector_functions.hpp"
 # include "../srcs/vector/utils.cpp"
+# include <fstream>
+# include <iostream>
 
-void	check_content(std::vector<int> &v1, ft::vector<int> &v2);
-void	check_size(std::vector<int> &v1, ft::vector<int> &v2);
-void	check_capacity(std::vector<int> &v1, ft::vector<int> &v2);
+int     check_content(std::vector<int> &v1, ft::vector<int> &v2, std::ofstream &monFlux1, std::ofstream &monFlux2);
+int     check_size(std::vector<int> &v1, ft::vector<int> &v2, std::ofstream &monFlux1, std::ofstream &monFlux2);
+int     check_capacity(std::vector<int> &v1, ft::vector<int> &v2, std::ofstream &monFlux1, std::ofstream &monFlux2);
 
 #endif

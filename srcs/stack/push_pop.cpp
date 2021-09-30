@@ -7,8 +7,8 @@ int main(void)
     std::stack<int>	std_default;
     ft::stack<int>	ft_default;
     int ret = 0;
-    std::ofstream monFlux1("logs/ft_stack.push_pop.log");
-    std::ofstream monFlux2("logs/std_stack.push_pop.log");
+    std::ofstream monFlux1("logs/stack/ft_stack.push_pop.log");
+    std::ofstream monFlux2("logs/stack/std_stack.push_pop.log");
 
     std_default.push(10);
     std_default.push(9);

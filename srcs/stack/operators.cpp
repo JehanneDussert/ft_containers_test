@@ -32,8 +32,8 @@ int main(void)
 	ft_copy = ft_s1;
 	std_copy = std_s1;
 
-	std::ofstream monFlux1("logs/ft_stack.operators.log");
-	std::ofstream monFlux2("logs/std_stack.operators.log");
+	std::ofstream monFlux1("logs/stack/ft_stack.operators.log");
+	std::ofstream monFlux2("logs/stack/std_stack.operators.log");
 
 	// std::cout << "operator= :\t";
 	if (ft_s1 != ft_copy)

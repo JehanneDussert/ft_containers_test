@@ -8,8 +8,8 @@ int main(void)
 	ft::stack<int>	ft_default;
   int ret = 0;
 
-	std::ofstream monFlux1("logs/ft_stack.size.log");
-	std::ofstream monFlux2("logs/std_stack.size.log");
+	std::ofstream monFlux1("logs/stack/ft_stack.size.log");
+	std::ofstream monFlux2("logs/stack/std_stack.size.log");
 
 	if (std_default.size() == ft_default.size() && ft_default.empty())
 		;
@@ -45,7 +45,6 @@ int main(void)
 		;
 	else
 		ret++;
-
 
 	monFlux1 << "\nPush some values\n";
 	monFlux1 << "#################################\n";

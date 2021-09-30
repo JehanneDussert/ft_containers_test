@@ -7,8 +7,8 @@ int main(void)
 	std::stack<int>	std_default;
 	ft::stack<int>	ft_default;
   int ret = 0;
-	std::ofstream monFlux1("logs/ft_stack.top.log");
-	std::ofstream monFlux2("logs/std_stack.top.log");
+	std::ofstream monFlux1("logs/stack/ft_stack.top.log");
+	std::ofstream monFlux2("logs/stack/std_stack.top.log");
 
     std_default.push(10);
     std_default.push(9);
@@ -61,14 +61,14 @@ int main(void)
 		ret++;
     
     //	ft_stack
-    monFlux1 << "Push new values\n";
+    monFlux1 << "\nPush new values\n";
     monFlux1 << "#################################\n";
     monFlux1 << "empty:\t\t" << ft_default.empty() << std::endl;
     monFlux1 << "size:\t\t" << ft_default.size() << std::endl;
     monFlux1 << "top:\t\t" << ft_default.top() << std::endl;
 
     // std_stack
-    monFlux2 << "Push new values\n";
+    monFlux2 << "\nPush new values\n";
     monFlux2 << "#################################\n";
     monFlux2 << "empty:\t\t" << std_default.empty() << std::endl;
     monFlux2 << "size:\t\t" << std_default.size() << std::endl;
