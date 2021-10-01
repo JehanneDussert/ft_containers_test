@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	std::cout << "\nreverse iterator\n";
+	std::cout << "\nreverse iterator";
 
 	std::vector<int>					std_fill(20, 15);
 	ft::vector<int>						ft_fill(20, 15);
@@ -10,62 +10,79 @@ int main(void)
     ft::vector<int>::reverse_iterator	ft_rev_it(ft_fill.rbegin());
 	int err = 0;
 
+	std::ofstream monFlux1("logs/vector/ft_vector.operators.log");
+	std::ofstream monFlux2("logs/vector/std_vector.operators.log");
+
 	if (*ft_rev_it == *std_rev_it)
-		std::cout << "Default :\t\e[0;32m[⭐️]\e[0m\t";
+	{
+		monFlux1 << "Default done\n\n";
+    	monFlux2 << "Default done\n\n";
+	}
 	else
-		std::cout << "Default :\t\t\e[0;31m[💥]\e[0m\t";
-	
+		err++;
+
+	monFlux1 << "Size: " << ft_fill.size() << std::endl;
+    monFlux2 << "Size: " << std_fill.size() << std::endl;
+	monFlux1 << "Capacity: " << ft_fill.capacity() << std::endl;
+    monFlux2 << "Capacity: " << std_fill.capacity() << std::endl;
+	monFlux1 << "Max size: " << ft_fill.max_size() << std::endl;
+    monFlux2 << "Max size: " << std_fill.max_size() << std::endl;
+
+    monFlux1 << "Content: \n";
+    monFlux2 << "Content: \n";
 	for (; std_rev_it != std_fill.rend(); std_rev_it++)
 	{
+		monFlux1 << *ft_rev_it << std::endl;
+    	monFlux2 << *std_rev_it << std::endl;
 		if (*ft_rev_it != *std_rev_it)
 			err++;
 		++ft_rev_it;
 	}
     if (std_fill.size() != ft_fill.size() || std_fill.capacity() != ft_fill.capacity() || std_fill.max_size() != ft_fill.max_size())
 		err++;
-	if (!err)
-		std::cout << "Capacity :\t\e[0;32m[⭐️]\e[0m\t";
-	else
-		std::cout << "Capacity :\t\t\e[0;31m[💥]\e[0m\t";
-	
-	err = 0;
-	if (!err)
-		std::cout << "Content :\t\e[0;32m[⭐️]\e[0m\t";
-	else
-		std::cout << "Content :\t\t\e[0;31m[💥]\e[0m\t";
 
 	ft_fill.pop_back(); std_fill.pop_back();
 	ft_fill.push_back(5); std_fill.push_back(5);
 	ft_fill.insert(ft_fill.begin() + 3, 3, 4);
 	std_fill.insert(std_fill.begin() + 3, 3, 4);
 
-	err = 0;
 	ft_rev_it = ft_fill.rbegin() + 2;
 	std_rev_it = std_fill.rbegin() + 2;
 
 	if (*ft_rev_it == *std_rev_it)
-		std::cout << "\nOperator :\t\e[0;32m[⭐️]\e[0m\t";
+	{
+		monFlux1 << "operator done\n";
+   		monFlux2 << "operator done\n";
+	}
 	else
-		std::cout << "\nOperator :\t\t\e[0;31m[💥]\e[0m\t";
+		err++;
 	
+	monFlux1 << "Size: " << ft_fill.size() << std::endl;
+    monFlux2 << "Size: " << std_fill.size() << std::endl;
+	monFlux1 << "Capacity: " << ft_fill.capacity() << std::endl;
+    monFlux2 << "Capacity: " << std_fill.capacity() << std::endl;
+	monFlux1 << "Max size: " << ft_fill.max_size() << std::endl;
+    monFlux2 << "Max size: " << std_fill.max_size() << std::endl;
+
+    monFlux1 << "Content: \n";
+    monFlux2 << "Content: \n";
 	for (; std_rev_it != std_fill.rend(); std_rev_it++)
 	{
+		monFlux1 << *ft_rev_it << std::endl;
+    	monFlux2 << *std_rev_it << std::endl;
 		if (*ft_rev_it != *std_rev_it)
 			err++;
 		++ft_rev_it;
 	}
     if (std_fill.size() != ft_fill.size() || std_fill.capacity() != ft_fill.capacity() || std_fill.max_size() != ft_fill.max_size())
 		err++;
-	if (!err)
-		std::cout << "Capacity :\t\e[0;32m[⭐️]\e[0m\t";
-	else
-		std::cout << "Capacity :\t\t\e[0;31m[💥]\e[0m\t";
 	
-	err = 0;
-	if (!err)
-		std::cout << "Content :\t\e[0;32m[⭐️]\e[0m\t";
+	if (err)
+		std::cout << "\e[0;31m[💥]\e[0m";
 	else
-		std::cout << "Content :\t\t\e[0;31m[💥]\e[0m\t";
+		std::cout << "\e[0;32m[⭐️]\e[0m";
+	monFlux1.close();
+	monFlux2.close();
 
 	std::cout << "\n";
 }
