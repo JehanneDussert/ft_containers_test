@@ -70,7 +70,17 @@ int iterator(std::ofstream &monFlux1, std::ofstream &monFlux2)
 
     std::vector<int>::iterator	std_it;
     ft::vector<int>::iterator	ft_it;
-	std::cout << "Default :\t\e[0;32m[⭐️]\e[0m\t";
+
+    monFlux1 << "Default done\n\n";
+    monFlux2 << "Default done\n\n";
+
+	monFlux1 << "Check with fill vector\n";
+	monFlux1 << "#################################\n";
+	monFlux2 << "Check with fill vector\n";
+	monFlux2 << "#################################\n";
+
+    monFlux1 << "Content: \n";
+    monFlux2 << "Content: \n";
 
 	std::vector<int>			        std_fill(8, 10);
 	ft::vector<int>			            ft_fill(8, 10);
@@ -78,28 +88,31 @@ int iterator(std::ofstream &monFlux1, std::ofstream &monFlux2)
     ft::vector<int>::iterator			ft_it_val(ft_fill.begin());
 	for (; std_it_val != std_fill.end(); ++std_it_val)
     {
+		monFlux1 << *ft_it_val << std::endl;
+    	monFlux2 << *std_it_val << std::endl;
         if (*std_it_val != *ft_it_val)
 		    err++;
         ++ft_it_val;
     }
-	if (!err)
-		std::cout << "Fill :\t\t\e[0;32m[⭐️]\e[0m\t";
-    else
-        std::cout << "Fill :\t\t\e[0;31m[💥]\e[0m\t"; 
+	
+	monFlux1 << "Check with copy constructor\n";
+	monFlux1 << "#################################\n";
+	monFlux2 << "Check with copy constructor\n";
+	monFlux2 << "#################################\n";
 
-    err = 0;
+    monFlux1 << "Content: \n";
+    monFlux2 << "Content: \n";
+
     std::vector<int>::iterator	std_it_copy(std_it_val);
     ft::vector<int>::iterator	ft_it_copy(ft_it_val);
 	for (; std_it_copy != std_fill.end(); ++std_it_copy)
     {
+		monFlux1 << *ft_it_copy << std::endl;
+    	monFlux2 << *std_it_copy << std::endl;
         if (*std_it_copy != *ft_it_copy)
 		    err++;
         ++ft_it_copy;
     }
-	if (!err)
-		std::cout << "Copy :\t\t\e[0;32m[⭐️]\e[0m\t";
-    else
-        std::cout << "Copy :\t\t\e[0;31m[💥]\e[0m\t";
 
 	typedef std::vector<int>::iterator			std_it_type;
 	typedef ft::vector<int>::iterator			ft_it_type;
@@ -108,9 +121,16 @@ int iterator(std::ofstream &monFlux1, std::ofstream &monFlux2)
     typedef ft_it_type::pointer 				ft_pointer;
 
     if (is_const_iterator<std_it_type, std_pointer>::value == is_const_iterator<ft_it_type, ft_pointer>::value)
-		std::cout << "Type :\t\t\e[0;32m[⭐️]\e[0m\t";
+	{
+        monFlux1 << "is_const done\n";
+	    monFlux2 << "is_const done\n";
+    }
 	else
-		std::cout << "Type :\t\t\e[0;31m[💥]\e[0m\t";
+    {
+		err++;
+        monFlux1 << "error is_const\n";
+	    monFlux2 << "error is_const\n";
+    }
     
     return err;
 }
@@ -125,41 +145,50 @@ int const_iterator(std::ofstream &monFlux1, std::ofstream &monFlux2)
 
     std::vector<int>::const_iterator	std_const_it;
     ft::vector<int>::const_iterator	    ft_const_it;
-
-    monFlux1 << "default done\n";
-    monFlux2 << "default done\n";
-
-	ft::vector<int>::iterator	it2 = ft_default.begin();
-	for (std::vector<int>::iterator	it1 = std_default.begin(); it1 != std_default.end(); ++it1)
-    {
-        if (*it1 != *it2)
-		    err++;
-        ++it2;
-    }
-
 	std::vector<int>			        std_fill(8, 10);
 	ft::vector<int>			            ft_fill(8, 10);
-    std::vector<int>::const_iterator	std_const_it_val(std_fill.begin());
+
+    monFlux1 << "Default done\n\n";
+    monFlux2 << "Default done\n\n";
+
+	monFlux1 << "Check with fill vector\n";
+	monFlux1 << "#################################\n";
+	monFlux2 << "Check with fill vector\n";
+	monFlux2 << "#################################\n";
+
+    monFlux1 << "Content: \n";
+    monFlux2 << "Content: \n";
+
+	std::vector<int>::const_iterator	std_const_it_val(std_fill.begin());
     ft::vector<int>::const_iterator     ft_const_it_val(ft_fill.begin());
-	
-    for (; std_const_it_val != std_fill.end(); ++std_const_it_val)
+	for (; std_const_it_val != std_fill.end(); ++std_const_it_val)
     {
+		monFlux1 << *ft_const_it_val << std::endl;
+    	monFlux2 << *std_const_it_val << std::endl;
         if (*std_const_it_val != *ft_const_it_val)
 		    err++;
         ++ft_const_it_val;
     }
-    
-	err += check_size(std_const_it_val, ft_const_it_val, monFlux1, monFlux2);
-	err += check_capacity(std_const_it_val, ft_const_it_val, monFlux1, monFlux2);
-	err += check_content(std_const_it_val, ft_const_it_val, monFlux1, monFlux2);
 
-    std::vector<int>::const_iterator	std_const_it_copy(std_const_it_val);
-    ft::vector<int>::const_iterator	    ft_const_it_copy(ft_const_it_val);
+	monFlux1 << "Check with copy constructor\n";
+	monFlux1 << "#################################\n";
+	monFlux2 << "Check with copy constructor\n";
+	monFlux2 << "#################################\n";
 
-	err += check_size(std_const_it_copy, ft_const_it_copy, monFlux1, monFlux2);
-	err += check_capacity(std_const_it_copy, ft_const_it_copy, monFlux1, monFlux2);
-	err += check_content(std_const_it_copy, ft_const_it_copy, monFlux1, monFlux2);
-	
+    monFlux1 << "Content: \n";
+    monFlux2 << "Content: \n";
+
+	std::vector<int>::const_iterator	std_const_it_copy(std_const_it_val);
+    ft::vector<int>::const_iterator	ft_const_it_copy(ft_const_it_val);
+	for (; std_const_it_copy != std_fill.end(); ++std_const_it_copy)
+    {
+		monFlux1 << *ft_const_it_val << std::endl;
+    	monFlux2 << *std_const_it_val << std::endl;
+        if (*std_const_it_copy != *ft_const_it_copy)
+		    err++;
+        ++ft_const_it_copy;
+    }
+    	
     typedef std::vector<int>::const_iterator	std_const_it_type;
     typedef ft::vector<int>::const_iterator		ft_const_it_type;
     typedef std_const_it_type::pointer			std_const_pointer;
@@ -194,21 +223,47 @@ int reverse_iterator(std::ofstream &monFlux1, std::ofstream &monFlux2)
 	monFlux1 << "default done\n";
 	monFlux2 << "default done\n";
 
+	monFlux1 << "Check with fill vector\n";
+	monFlux1 << "#################################\n";
+	monFlux2 << "Check with fill vector\n";
+	monFlux2 << "#################################\n";
+
+    monFlux1 << "Content: \n";
+    monFlux2 << "Content: \n";
+
 	std::vector<int>			        std_fill(8, 10);
 	ft::vector<int>			            ft_fill(8, 10);
     std::vector<int>::reverse_iterator	std_rev_it_val(std_fill.rbegin());
     ft::vector<int>::reverse_iterator	ft_rev_it_val(ft_fill.rbegin());
 
-	err += check_size(ft_rev_it_val, std_rev_it_val, monFlux1, monFlux2);
-	err += check_capacity(ft_rev_it_val, std_rev_it_val, monFlux1, monFlux2);
-	err += check_content(ft_rev_it_val, std_rev_it_val, monFlux1, monFlux2);
+	for (; std_rev_it_val != std_fill.rend(); ++std_rev_it_val)
+    {
+		monFlux1 << *ft_rev_it_val << std::endl;
+    	monFlux2 << *std_rev_it_val << std::endl;
+        if (*std_rev_it_val != *ft_rev_it_val)
+		    err++;
+        ++ft_rev_it_val;
+    }
 
     std::vector<int>::reverse_iterator	std_rev_it_copy(std_rev_it_val);
     ft::vector<int>::reverse_iterator	ft_rev_it_copy(ft_rev_it_val);
 
-	err += check_size(ft_rev_it_copy, std_rev_it_copy, monFlux1, monFlux2);
-	err += check_capacity(ft_rev_it_copy, std_rev_it_copy, monFlux1, monFlux2);
-	err += check_content(ft_rev_it_copy, std_rev_it_copy, monFlux1, monFlux2);
+	monFlux1 << "Check with copy constructor\n";
+	monFlux1 << "#################################\n";
+	monFlux2 << "Check with copy constructor\n";
+	monFlux2 << "#################################\n";
+
+    monFlux1 << "Content: \n";
+    monFlux2 << "Content: \n";
+
+	for (; std_rev_it_copy != std_fill.rend(); ++std_rev_it_copy)
+    {
+		monFlux1 << *ft_rev_it_val << std::endl;
+    	monFlux2 << *std_rev_it_val << std::endl;
+        if (*std_rev_it_copy != *ft_rev_it_copy)
+		    err++;
+        ++ft_rev_it_copy;
+    }
 
 	typedef std::vector<int>::iterator			std_it_type;
 	typedef ft::vector<int>::iterator			ft_it_type;
@@ -234,30 +289,21 @@ int reverse_iterator(std::ofstream &monFlux1, std::ofstream &monFlux2)
 
 int main(void)
 {
+	int err = 0;
     std::cout << "constructors";
 
 	std::ofstream monFlux1("logs/vector/ft_vector.constructors.log");
 	std::ofstream monFlux2("logs/vector/std_vector.constructors.log");
 
-	if (vector(monFlux1, monFlux2))
-		std::cout << "\t\t\e[0;31m[💥]\e[0m";
+	err += vector(monFlux1, monFlux2);
+	err += iterator(monFlux1, monFlux2);
+	err += const_iterator(monFlux1, monFlux2);
+	err += reverse_iterator(monFlux1, monFlux2);
+
+	if (err)
+		std::cout << "\t\e[0;31m[💥]\e[0m";
 	else
-		std::cout << "\t\t\e[0;32m[⭐️]\e[0m";
-    
-    if (iterator(monFlux1, monFlux2))
-		std::cout << "\t\t\e[0;31m[💥]\e[0m";
-	else
-		std::cout << "\t\t\e[0;32m[⭐️]\e[0m";
-    
-    if (const_iterator(monFlux1, monFlux2))
-		std::cout << "\t\t\e[0;31m[💥]\e[0m";
-	else
-		std::cout << "\t\t\e[0;32m[⭐️]\e[0m";
-    
-    if (reverse_iterator(monFlux1, monFlux2))
-		std::cout << "\t\t\e[0;31m[💥]\e[0m";
-	else
-		std::cout << "\t\t\e[0;32m[⭐️]\e[0m";
+		std::cout << "\t\e[0;32m[⭐️]\e[0m";
 
     std::cout << "\n";
 	monFlux1.close();
