@@ -47,4 +47,14 @@ $CXX $CXXFLAGS srcs/stack/size.cpp && ./a.out
 $CXX $CXXFLAGS srcs/stack/top.cpp && ./a.out
 $CXX $CXXFLAGS srcs/stack/push_pop.cpp && ./a.out
 $CXX $CXXFLAGS srcs/stack/operators.cpp && ./a.out
-#$CXX $CXXFLAGS srcs/map_test.cpp && ./a.out
+
+printf "\n\n${BOLD}MAP TEST${EOC}\n";
+printf "********************\n\n";
+$CXX $CXXFLAGS srcs/map/constructors.cpp && ./a.out
+# $CXX $CXXFLAGS srcs/map/begin_end.cpp && ./a.out
+# $CXX $CXXFLAGS srcs/map/operators.cpp && ./a.out
+# $CXX $CXXFLAGS srcs/stack/capacity.cpp && ./a.out
+# $CXX $CXXFLAGS srcs/stack/modifiers.cpp && ./a.out
+# $CXX $CXXFLAGS srcs/stack/observers.cpp && ./a.out
+# $CXX $CXXFLAGS srcs/stack/operations.cpp && ./a.out
+# $CXX $CXXFLAGS srcs/stack/iterators.cpp && ./a.out
