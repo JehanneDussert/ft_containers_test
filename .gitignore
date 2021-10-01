@@ -1,6 +1,3 @@
-logs/vector/*.log
-logs/map/*.log
-logs/stack/*.log
 a.out.dSYM/
 # Prerequisites
 *.d
