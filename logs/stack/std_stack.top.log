@@ -1,0 +1,17 @@
+Check top of stack value
+#################################
+empty:		0
+size:		6
+top:		5
+
+Push new values
+#################################
+empty:		0
+size:		12
+top:		6
+
+Pop values
+#################################
+empty:		0
+size:		11
+top:		5

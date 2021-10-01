@@ -1,0 +1,68 @@
+vector
+#################################
+operator= done
+operator!= done
+operator== done
+operator[] done
+operator< done
+operator> done
+operator>= done
+operator<= done
+
+iterator
+#################################
+Check with fill constructor
+********************************
+operator* done
+operator++ done
+operator= done
+operator> done
+operator< done
+operator>= done
+operator<= done
+operator== done
+operator!= done
+operator-- done
+Check with copy constructor
+********************************
+operator+= done
+operator-= done
+operator[] done
+
+const_iterator
+#################################
+Check with fill constructor
+********************************
+operator* done
+operator++ done
+operator= done
+operator> done
+operator< done
+operator>= done
+operator<= done
+operator== done
+operator!= done
+operator-- done
+Check with modified const_iterator
+********************************
+operator+= done
+operator-= done
+operator[] done
+
+reverse_iterator
+#################################
+operator* done
+operator++ done
+operator= done
+operator> done
+operator< done
+operator>= done
+operator<= done
+operator== done
+operator!= done
+operator-- done
+Check with copy constructor
+********************************
+operator+= done
+operator-= done
+operator[] done
