@@ -57,4 +57,5 @@ int main(void)
 		std::cout << "\t\e[0;32m[⭐️]\e[0m";
     monFlux1.close();
     monFlux2.close();
+	std::cout << "\n";
 }

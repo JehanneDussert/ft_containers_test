@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	std::cout << "\nreverse iterator";
+	std::cout << "reverse iterator";
 
 	std::vector<int>					std_fill(20, 15);
 	ft::vector<int>						ft_fill(20, 15);
@@ -10,8 +10,8 @@ int main(void)
     ft::vector<int>::reverse_iterator	ft_rev_it(ft_fill.rbegin());
 	int err = 0;
 
-	std::ofstream monFlux1("logs/vector/ft_vector.operators.log");
-	std::ofstream monFlux2("logs/vector/std_vector.operators.log");
+	std::ofstream monFlux1("logs/vector/ft_vector.reverse_iterator.log");
+	std::ofstream monFlux2("logs/vector/std_vector.reverse_iterator.log");
 
 	if (*ft_rev_it == *std_rev_it)
 	{
